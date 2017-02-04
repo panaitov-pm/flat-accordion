@@ -1,0 +1,122 @@
+@import 'variables';
+
+@font-face {
+    font-family: 'JF-Flat';
+    src: url('../fonts/JF-Flat-regular.eot');
+    src: url('../fonts/JF-Flat-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/JF-Flat-regular.woff') format('woff'),
+         url('../fonts/JF-Flat-regular.ttf') format('truetype'),
+         url('../fonts/JF-Flat-regular.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* -----------------------------------------
+ GLOBAL
+----------------------------------------- */
+html {
+    height: 100%;
+}
+body, html {
+    min-height: 100%;
+}
+body {
+	font: 400 18px/1.6 'JF-Flat', Arial, sans-serif;
+	color: $white-dark-color;
+	background-color: $orange-light-color;
+}
+
+/* -----------------------------------------
+ ACCORDION
+----------------------------------------- */
+.accordion {
+	margin: 50px auto 0;
+	width: 100%;
+	max-width: 380px;
+	
+	&__location {
+		background-color: $red-color;
+		
+		.head-accordion {
+		
+			&:before {
+				background: url('../img/location.png') 50% no-repeat;
+			}
+		}
+	}
+
+	&__music {
+		color: $cream-color;
+		background-color: $red-light-color;
+		
+		.head-accordion {
+			
+			&:before {
+				background: url('../img/headphones.png') 50% no-repeat;
+			}
+		}
+	}
+
+	&__notes {
+		color: $red-color;
+		background-color: $cream-color;
+		
+		.head-accordion {
+			
+			&:before {
+				background: url('../img/lightbulb.png') 50% no-repeat;
+			}
+		}
+	}
+
+	&__books {
+		color: $red-light-color;
+		background-color: $white-dark-color;
+		
+		.head-accordion {
+			
+			&:before {
+				background: url('../img/bookmarks.png') 50% no-repeat;
+			}
+		}
+	}
+
+	&__tendances {
+		background-color: $orange-color;
+		
+		.head-accordion {
+			
+			&:before {
+				background: url('../img/lightning-bolt.png') 50% no-repeat;
+			}
+		}
+	}
+}
+
+.head-accordion {
+	position: relative;
+	padding: 0 20px;
+	height: 100px;
+	line-height: 100px;
+	cursor: pointer;
+	
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		width: 42px;
+		height: 100%;
+	}
+
+	&__title {
+		margin-left: 95px;
+		display: inline-block;
+		font-size: 24px;
+	}
+}
+
+.body-accordion {
+	display: none;
+	padding: 15px 10px;
+	box-shadow: inset 0 0 5.1px 0.9px rgba(0, 0, 0, 0.25);
+}
